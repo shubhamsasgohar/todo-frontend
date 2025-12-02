@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📘 Todo List Frontend — Next.js
 
-## Getting Started
+This project is the frontend UI for the Todo List application.
+It is built using Next.js (App Router) and communicates with a Laravel backend API.
 
-First, run the development server:
+🚀 Features
 
-```bash
+✔ View all tasks in a clean table layout
+
+✔ Create a new task (with PDF upload)
+
+✔ Edit an existing task
+
+✔ Delete tasks
+
+✔ Modern UI built with TailwindCSS
+
+✔ Fully responsive
+
+🛠️ Tech Stack
+Layer	Technology
+Frontend	Next.js 14 (App Router)
+Styling	TailwindCSS
+API Calls	Native fetch + custom API helper
+Routing	Dynamic routes (/edit/[id])
+⚙️ Installation & Setup
+
+Follow the steps below to run the frontend locally.
+
+1️⃣ Install dependencies
+npm install
+
+2️⃣ Set backend API URL
+
+Open:
+
+lib/api.ts
+
+
+Update:
+
+const API_BASE = "http://127.0.0.1:8000/api";
+
+3️⃣ Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Frontend will run at:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🔗 API Connection
 
-To learn more about Next.js, take a look at the following resources:
+The frontend uses the Laravel backend:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+http://127.0.0.1:8000/api
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+All API requests are handled through:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+lib/api.ts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🎨 UI
+
+The UI uses:
+
+TailwindCSS
+
+Clean card design for forms
+
+Table layout for listing tasks
+
+Buttons for Edit and Delete
+
+File upload input for PDFs
+
+✔ Ready to Use
+
+Once both frontend and backend servers are running:
+
+Your home page displays all todos
+
+You can create, edit, delete tasks
+
+PDF upload and preview work
+
+Everything is synced with the Laravel API
